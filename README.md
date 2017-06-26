@@ -9,6 +9,7 @@ Open your game.project file and in the dependencies field under project add:
 
 >https://github.com/AGulev/defreview/archive/master.zip
 ## Example
+![screenshot](https://cdn.rawgit.com/AGulev/defreview/50891dc0/example/example_image.png)
 ```lua
 if (defreview and defreview.isSupported()) then
   defreview.requestReview()
