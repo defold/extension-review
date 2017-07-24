@@ -15,9 +15,8 @@ bool DefReview_isSupported() {
 }
 
 void DefReview_requestReview() {
-	Class SKStoreReviewController_ = NSClassFromString(@"SKStoreReviewController");
-	if (SKStoreReviewController_) {
-        [SKStoreReviewController_ performSelector:@selector(requestReview)];
+	if (DefReview_isSupported()) {
+       [SKStoreReviewController requestReview];
     }
 }
 #endif
