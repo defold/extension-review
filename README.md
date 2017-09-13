@@ -1,6 +1,6 @@
 # DefReview
 
-This is small native extension for [Defold engine](http://www.defold.com) which allows to use [native iOS Ratings and Reviews window](https://developer.apple.com/ios/human-interface-guidelines/interaction/ratings-and-reviews/).
+This is small native extension for [Defold engine](http://www.defold.com) which allows to use [native iOS Ratings and Reviews window](https://developer.apple.com/ios/human-interface-guidelines/system-capabilities/ratings-and-reviews/).
 
 ## Installation
 
