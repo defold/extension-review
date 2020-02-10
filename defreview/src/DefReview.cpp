@@ -2,7 +2,9 @@
 #define LIB_NAME "DefReview"
 #define MODULE_NAME "defreview"
 
+#ifndef DLIB_LOG_DOMAIN
 #define DLIB_LOG_DOMAIN LIB_NAME
+#endif
 #include <dmsdk/sdk.h>
 
 #if defined(DM_PLATFORM_IOS)
