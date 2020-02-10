@@ -4,19 +4,21 @@
 #include "DefReviewIOS.h"
 #include <StoreKit/StoreKit.h>
 
-NSString *minVersion = @"10.3";
+static Class getClass_SKStoreReviewController() {
+    // Cache the class in a static var
+    static const Class SKStoreReviewController_ = NSClassFromString(@"SKStoreReviewController");
+    return SKStoreReviewController_;
+}
 
 bool DefReview_isSupported() {
-    BOOL status = NO;
-    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(minVersion)){
-        status = YES;
-    }
-    return status == YES;
+    Class SKStoreReviewController_ = getClass_SKStoreReviewController();
+    return !!SKStoreReviewController_;
 }
 
 void DefReview_requestReview() {
-	if (DefReview_isSupported()) {
-       [SKStoreReviewController requestReview];
+    Class SKStoreReviewController_ = getClass_SKStoreReviewController();
+    if (SKStoreReviewController_) {
+        [SKStoreReviewController_ performSelector:@selector(requestReview)];
     }
 }
 #endif
