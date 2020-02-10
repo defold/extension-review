@@ -1,1 +1,14 @@
 name: "DefReview"
+
+platforms:
+    arm64-ios:
+        context:
+            frameworks: ["StoreKit"]
+
+    armv7-ios:
+        context:
+            frameworks: ["StoreKit"]
+
+    x86_64-ios:
+        context:
+            frameworks: ["StoreKit"]
