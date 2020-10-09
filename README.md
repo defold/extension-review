@@ -25,7 +25,9 @@ end
 ## LUA Api
 #### defreview.isSupported()
 Check if the feature supprorted.
-Available only on iOS 10.3+ and Android 5.0+ (API 21+) and the Google Play Store have to be installed.
+Check if the feature supported.
+Available only on iOS 10.3+.
+Android 5.0+ (API 21+) and the Google Play Store have to be installed.
 #### defreview.requestReview()
 Show review window.
 
