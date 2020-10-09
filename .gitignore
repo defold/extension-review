@@ -1,2 +1,5 @@
 /build/
 /.internal/
+/.internal
+/build
+.DS_Store

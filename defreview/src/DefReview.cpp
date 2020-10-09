@@ -7,17 +7,19 @@
 #endif
 #include <dmsdk/sdk.h>
 
-#if defined(DM_PLATFORM_IOS)
-#include "objc/DefReviewIOS.h"
+#if defined(DM_PLATFORM_IOS) || defined(DM_PLATFORM_ANDROID)
+#include "private_DefReview.h"
 
+namespace defReview {
+    
 static int isSupported(lua_State* L) {
-    bool status = DefReview_isSupported();
+    bool status = isSupported();
     lua_pushboolean(L, status);
     return 1;
 }
 
 static int requestReview(lua_State* L) {
-    DefReview_requestReview();
+    requestReview();
     return 0;
 }
 
@@ -36,6 +38,8 @@ static void LuaInit(lua_State* L)
     assert(top == lua_gettop(L));
 }
 
+}// namespace
+
 dmExtension::Result AppInitializeReview(dmExtension::AppParams* params)
 {
     return dmExtension::RESULT_OK;
@@ -43,7 +47,7 @@ dmExtension::Result AppInitializeReview(dmExtension::AppParams* params)
 
 dmExtension::Result InitializeReview(dmExtension::Params* params)
 {
-    LuaInit(params->m_L);
+    defReview::LuaInit(params->m_L);
     return dmExtension::RESULT_OK;
 }
 

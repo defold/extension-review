@@ -1,8 +1,10 @@
 #include <dmsdk/sdk.h>
 
 #if defined(DM_PLATFORM_IOS)
-#include "DefReviewIOS.h"
+#include "../private_DefReview.h"
 #include <StoreKit/StoreKit.h>
+
+namespace defReview {
 
 static Class getClass_SKStoreReviewController() {
     // Cache the class in a static var
@@ -10,15 +12,18 @@ static Class getClass_SKStoreReviewController() {
     return SKStoreReviewController_;
 }
 
-bool DefReview_isSupported() {
+bool isSupported() {
     Class SKStoreReviewController_ = getClass_SKStoreReviewController();
     return !!SKStoreReviewController_;
 }
 
-void DefReview_requestReview() {
+void requestReview() {
     Class SKStoreReviewController_ = getClass_SKStoreReviewController();
     if (SKStoreReviewController_) {
         [SKStoreReviewController_ performSelector:@selector(requestReview)];
     }
 }
+
+}//namespace
+
 #endif
