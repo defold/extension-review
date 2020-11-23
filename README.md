@@ -1,6 +1,6 @@
 # Native iOS and Android ratings and review windows for Defold
 
-This is small native extension for [Defold engine](http://www.defold.com) which allows to use [native iOS Ratings and Reviews window](https://developer.apple.com/ios/human-interface-guidelines/system-capabilities/ratings-and-reviews/) and [Google Play In-App Review API](https://developer.android.com/guide/playcore/in-app-review).
+This is small native extension for [Defold engine](http://www.defold.com) which allows to use [native iOS Ratings and Reviews window](https://developer.apple.com/ios/human-interface-guidelines/system-capabilities/ratings-and-reviews/) and [Google Play In-App Review API](https://developer.android.com/guide/playcore/in-app-review). The extension was originally created by [AGulev](https://www.github.com/AGulev) and kindly transferred to the Defold Foundation.
 
 _Your app should be in store otherwise method `requestReview()` won't work._
 
