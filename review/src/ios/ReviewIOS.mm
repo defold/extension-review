@@ -4,7 +4,7 @@
 #include "../private_review.h"
 #include <StoreKit/StoreKit.h>
 
-namespace review {
+namespace ext_review {
 
 static Class getClass_SKStoreReviewController() {
     // Cache the class in a static var

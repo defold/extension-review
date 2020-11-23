@@ -2,7 +2,7 @@
 #include "../private_review.h"
 #include "jni.h"
 
-namespace review {
+namespace ext_review {
 
 const char* JAR_PATH = "com/defold/review/Review";
 

@@ -10,7 +10,7 @@
 #if defined(DM_PLATFORM_IOS) || defined(DM_PLATFORM_ANDROID)
 #include "private_review.h"
 
-namespace review {
+namespace ext_review {
 
 static int IsSupported(lua_State* L) {
     bool status = isSupported();
@@ -26,7 +26,7 @@ static int RequestReview(lua_State* L) {
 static const luaL_reg Module_methods[] =
 {
     {"isSupported", IsSupported},
-    {"requestReview", requestReview},
+    {"requestReview", RequestReview},
     {"is_supported", IsSupported},
     {"request_review", RequestReview},
     {0, 0}
@@ -49,7 +49,7 @@ dmExtension::Result AppInitializeReview(dmExtension::AppParams* params)
 
 dmExtension::Result InitializeReview(dmExtension::Params* params)
 {
-    defReview::LuaInit(params->m_L);
+    ext_review::LuaInit(params->m_L);
     return dmExtension::RESULT_OK;
 }
 

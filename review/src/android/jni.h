@@ -2,7 +2,7 @@
 #include <jni.h>
 #include <dmsdk/sdk.h>
 
-namespace review {
+namespace ext_review {
 
 struct ThreadAttacher {
   JNIEnv *env;
