@@ -1,7 +1,7 @@
 [project]
-title = DefReview
-version = 2.0
-dependencies = 
+title = review
+version = 3.0
+dependencies =
 
 [bootstrap]
 main_collection = /example/main.collectionc
@@ -13,10 +13,10 @@ game_binding = /input/game.input_bindingc
 shared_state = 1
 
 [library]
-include_dirs = defreview
+include_dirs = review
 
 [ios]
-bundle_identifier = com.agulev.test
+bundle_identifier = com.defold.extension.review
 app_icon_120x120 = /example/imgs/logo.png
 app_icon_180x180 = /example/imgs/logo.png
 app_icon_76x76 = /example/imgs/logo.png
@@ -28,11 +28,10 @@ app_icon_144x144 = /example/imgs/logo.png
 app_icon_167x167 = /example/imgs/logo.png
 
 [android]
-package = com.agulev.test
+package = com.defold.extension.review
 
 [osx]
-bundle_identifier = com.agulev.test
+bundle_identifier = com.defold.extension.review
 
 [display]
 dynamic_orientation = 1
-

@@ -1,14 +1,16 @@
 function init(self)
 	msg.post("@render:", "use_fixed_fit_projection")
-	go.animate("/go", "position.y", go.PLAYBACK_LOOP_PINGPONG, 123, go.EASING_INSINE, 1)
+	go.animate("logo", "position.y", go.PLAYBACK_LOOP_PINGPONG, 123, go.EASING_INSINE, 1)
+
+
 	msg.post("@render:", "clear_color", { color = vmath.vector4(1,1,1,1)})
 
-	label.set_text("/go1#label", "isSupported ".. tostring(((defreview and defreview.isSupported()) or "false")))
+	label.set_text("#supported", "is_supported ".. tostring(((review and review.is_supported()) or "false")))
 
 	timer.delay(3, false, function()
-		label.set_text("/go1#label1", "Show")
-		if (defreview and defreview.isSupported()) then
-			defreview.requestReview()
+		label.set_text("#label1", "Show")
+		if (review and review.is_supported()) then
+			review.request_review()
 		else
 			--do something else
 		end

@@ -1,10 +1,10 @@
 #if defined(DM_PLATFORM_ANDROID)
-#include "../private_DefReview.h"
+#include "../private_review.h"
 #include "jni.h"
 
-namespace defReview {
+namespace review {
 
-const char* JAR_PATH = "com/agulev/defreview/DefReview";
+const char* JAR_PATH = "com/defold/review/Review";
 
 bool isSupported() {
     ThreadAttacher attacher;
@@ -24,7 +24,7 @@ void requestReview() {
     jmethodID method = env->GetStaticMethodID(cls, "requestReview", "(Landroid/app/Activity;)V");
     env->CallStaticVoidMethod(cls, method, dmGraphics::GetNativeAndroidActivity());
 }
-    
+
 }//namespace
 
 #endif

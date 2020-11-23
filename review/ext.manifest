@@ -1,4 +1,4 @@
-name: "DefReview"
+name: "review"
 
 platforms:
     arm64-ios:

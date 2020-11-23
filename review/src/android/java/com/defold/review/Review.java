@@ -1,4 +1,4 @@
-package com.agulev.defreview;
+package com.defold.review;
 
 import android.app.Activity;
 import android.os.Build;
@@ -9,7 +9,7 @@ import com.google.android.play.core.review.ReviewManagerFactory;
 import com.google.android.play.core.tasks.Task;
 import com.google.android.play.core.tasks.OnCompleteListener;
 
-public class DefReview {
+public class Review {
 
     public static void requestReview(final Activity appActivity) {
         final ReviewManager manager = ReviewManagerFactory.create(appActivity);

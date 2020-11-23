@@ -1,10 +1,10 @@
 #include <dmsdk/sdk.h>
 
 #if defined(DM_PLATFORM_IOS)
-#include "../private_DefReview.h"
+#include "../private_review.h"
 #include <StoreKit/StoreKit.h>
 
-namespace defReview {
+namespace review {
 
 static Class getClass_SKStoreReviewController() {
     // Cache the class in a static var

@@ -1,6 +1,6 @@
-#define EXTENSION_NAME DefReview
-#define LIB_NAME "DefReview"
-#define MODULE_NAME "defreview"
+#define EXTENSION_NAME review
+#define LIB_NAME "review"
+#define MODULE_NAME "review"
 
 #ifndef DLIB_LOG_DOMAIN
 #define DLIB_LOG_DOMAIN LIB_NAME
@@ -8,25 +8,27 @@
 #include <dmsdk/sdk.h>
 
 #if defined(DM_PLATFORM_IOS) || defined(DM_PLATFORM_ANDROID)
-#include "private_DefReview.h"
+#include "private_review.h"
 
-namespace defReview {
-    
-static int isSupported(lua_State* L) {
+namespace review {
+
+static int IsSupported(lua_State* L) {
     bool status = isSupported();
     lua_pushboolean(L, status);
     return 1;
 }
 
-static int requestReview(lua_State* L) {
+static int RequestReview(lua_State* L) {
     requestReview();
     return 0;
 }
 
 static const luaL_reg Module_methods[] =
 {
-    {"isSupported", isSupported},
+    {"isSupported", IsSupported},
     {"requestReview", requestReview},
+    {"is_supported", IsSupported},
+    {"request_review", RequestReview},
     {0, 0}
 };
 

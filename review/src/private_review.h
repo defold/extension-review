@@ -1,7 +1,7 @@
 #pragma once
 #if defined(DM_PLATFORM_IOS) || defined(DM_PLATFORM_ANDROID)
 
-namespace defReview {
+namespace review {
 
 bool isSupported();
 void requestReview();

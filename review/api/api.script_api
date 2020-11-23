@@ -1,18 +1,20 @@
-- name: defreview
+- name: review
   type: table
-  desc: Functions and constants for interacting with DefReview APIs
+  desc: Functions and constants for interacting with review APIs
 
   members:
 
 #*****************************************************************************************************
 
-  - name: requestReview
+  - name: request_review
     type: function
+    desc: Open native review/rating popup
 
 #*****************************************************************************************************
 
-  - name: isSupported
+  - name: is_supported
     type: function
+    desc: Available only on iOS 10.3+. Android 5.0+ (API 21+) and the Google Play Store has to be installed.
 
 #*****************************************************************************************************
       
