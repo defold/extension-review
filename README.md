@@ -1,4 +1,4 @@
-# DefReview
+# Native iOS and Android ratings and review windows for Defold
 
 This is small native extension for [Defold engine](http://www.defold.com) which allows to use [native iOS Ratings and Reviews window](https://developer.apple.com/ios/human-interface-guidelines/system-capabilities/ratings-and-reviews/) and [Google Play In-App Review API](https://developer.android.com/guide/playcore/in-app-review).
 
@@ -9,11 +9,12 @@ _Your app should be in store otherwise method `requestReview()` won't work._
 You can use the DefReview extension in your own project by adding this project as a [Defold library dependency](http://www.defold.com/manuals/libraries/).
 Open your game.project file and in the dependencies field under project add:
 
->https://github.com/AGulev/defreview/archive/master.zip
+>https://github.com/defold/extension-review/archive/master.zip
 
 ## Example
-![screenshot iOS](https://cdn.rawgit.com/AGulev/defreview/50891dc0/example/example_image.png)
+![screenshot iOS](/example/example_image.png)
 ![Screenshot android](https://user-images.githubusercontent.com/2209596/95632078-26a1d400-0a85-11eb-8d34-e25ec25d8b29.png)
+
 ```lua
 if (defreview and defreview.isSupported()) then
   defreview.requestReview()
