@@ -12,7 +12,7 @@ To use this library in your Defold project, add the following URL to your `game.
 
 https://github.com/defold/extension-review/archive/master.zip
 
-We recommend using a link to a zip file of a [specific release](http
+We recommend using a link to a zip file of a [specific release](https://github.com/defold/extension-review/releases)
 
 ## Example
 ![screenshot iOS](example_image.png)
