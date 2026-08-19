@@ -1,0 +1,2 @@
+# Loaded by native review code through JNI.
+-keep,allowoptimization class com.defold.review.** { *; }
